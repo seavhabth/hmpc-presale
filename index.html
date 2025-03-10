@@ -5,36 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DogeMoon Presale</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Web3 -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
 </head>
 <body>
     <header>
+        <div id="walletStatus" class="wallet-status">🔴 Not Connected</div>
         <h1>🚀 DOGEMOON Presale 🚀</h1>
+        <div id="priceTicker" class="price-ticker">LIVE PRICE: $0.0001 ▲ 12%</div>
     </header>
-    
+
     <main>
-        <div class="countdown">
-            <h2>Presale Starts In:</h2>
-            <div id="timer">00d 00h 00m 00s</div>
-        </div>
+        <!-- Add these new sections -->
+        <section class="chart-section">
+            <canvas id="priceChart"></canvas>
+        </section>
 
-        <div class="token-info">
-            <div class="card">
-                <h3>💰 Total Supply</h3>
-                <p>1,000,000,000 DOGEM</p>
+        <section class="audit-section">
+            <h2>Audits & Security</h2>
+            <div class="audit-badges">
+                <img src="https://placehold.co/150x60?text=CertiK+Audited" alt="Audit Badge">
+                <img src="https://placehold.co/150x60?text=Hacken+Verified" alt="Audit Badge">
             </div>
-            <div class="card">
-                <h3>🔥 Tokens Burned</h3>
-                <p>500,000,000 DOGEM</p>
+        </section>
+
+        <section class="team-section">
+            <h2>Core Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Team Member">
+                    <h3>John Doge</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <!-- Add more team members -->
             </div>
-        </div>
+        </section>
 
-        <button id="buyButton" class="cta">Buy DOGEM Now!</button>
-
-        <div class="social-links">
-            <a href="#" target="_blank">Telegram</a>
-            <a href="#" target="_blank">Twitter</a>
-            <a href="#" target="_blank">Dextools</a>
-        </div>
+        <!-- Existing sections -->
     </main>
 
     <script src="script.js"></script>
